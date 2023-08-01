@@ -16,7 +16,7 @@ func main() {
 	}
 	defer f.Close()
 	iLog := log.New(f, "customLogLineNumber ", log.LstdFlags)
-	iLog.SetFlags(log.LstdFlags)
+	iLog.SetFlags(log.LstdFlags | log.Lshortfile)
 	iLog.Println("Hello there!")
 	iLog.Println("Another log entry!")
 }
