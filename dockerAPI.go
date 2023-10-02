@@ -16,7 +16,7 @@ func listContainers() error {
 	}
 
 	containers, err := cli.ContainerList(context.Background(),
-		typs.ContainerListOptions{})
+		types.ContainerListOptions{})
 	if err != nil {
 		return (err)
 	}
