@@ -1,7 +1,6 @@
 package main
 
 import (
-	"context"
 	"fmt"
 
 	"github.com/docker/docker/api/types"
@@ -10,7 +9,7 @@ import (
 )
 
 func listContainers() error {
-	cli, err := client.NewEnvClient()
+	cli, err := client.NewClientWithOpts()
 	if err != nil {
 		return (err)
 	}
@@ -28,7 +27,7 @@ func listContainers() error {
 }
 
 func listImages() error {
-	cli, err := client.NewEnvClient()
+	cli, err := client.NewClientWithOpts()
 	if err != nil {
 		return (err)
 	}
